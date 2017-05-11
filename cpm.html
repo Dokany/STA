@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Static Timing Analyzer</title>
+    <link id="css_home" rel="stylesheet" href="Resources/css/style.css"/>
+    <meta charset="utf-8" />
+    <script src="Resources/Vendors/graphlib.js"></script>
+    <script src="Resources/Vendors/d3.v4.min.js"></script>
+    <script src="Resources/Vendors/graphlib.min.js"></script>
+    <script src="https://d3js.org/d3-collection.v3.min.js"></script> <!–-Broken Link-->
+    <script src="Resources/Vendors/d3-dispatch.v1.min.js"></script>
+    <script src="Resources/Vendors/d3-quadtree.v1.min.js"></script>
+    <script src="Resources/Vendors/d3-timer.v1.min.js"></script>
+    <script src="Resources/Vendors/d3-force.v1.min.js"></script>
+    <script src="Resources/Vendors/d3.v3.min.js"></script>
+    <script src="Resources/Vendors/jquery-3.2.1.min.js"></script>
+
+    <script src="Resources/js/sta_sh.js"></script>
+</head>
+
+<header>
+    <a href="home.html"><label><center><b><h1>Static Timing Analyzer</h1></b></center></label><br/></a>
+    <label><center><b><h2>Static Timing Analysis | Critical Path Finder</h2></b></center></label><br/>
+    <button class="hamburger">&#9776;</button>
+    <button class="cross">&#735;</button>
+</header>
+
+<body class="home">
+    <label><p>Upload Standard Cell Library Liberty File</p></label>
+    <input class="file" type="file" accept=".lib" id="lib_file" />
+    <input class="btn" type="button" value="Upload" onclick="parse_lib()" />
+    <label><p>Upload Circuit Synthesis File</p></label>
+    <input class="file" type="file" accept=".json" id="synth_file" />
+    <input class="btn" type="button" value="Analyze" onclick="main_func()" />
+<div class="menu">
+  <ul>
+    <a href="#"><li>File Formats</li></a>
+    <a href="dag.html"><li>DAG Generator</li></a>
+    <a href="cpm.html" class="here"><li>Critical Path Finder</li></a>
+    <a href="about.html"><li>STA Report</li></a>
+    <a href="help.html"><li>Help</li></a>
+    <a href="about.html"><li>About Project</li></a>
+    <a href="group10.html"><li>Group 10 Members</li></a>
+  </ul>
+</div>  
+  
+    <script src="Resources/js/hamburger_menu.js"></script>
+</body>
+
+<footer>
+ <small><center>&copy; Copyright 2017, Group 10</center></small>
+</footer>
+
+</html>
