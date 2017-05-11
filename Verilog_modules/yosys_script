@@ -1,9 +1,9 @@
-read_verilog ALU8.v
-hierarchy -check -top ALU8
+read_verilog <verilog-file>
+hierarchy -check -top <top-module>
 proc; opt; fsm; opt; memory; opt
 techmap; opt
 flatten; opt
 dfflibmap -liberty osu035.lib
 abc -liberty osu035.lib
 clean
-write_json ALU8_synth.json
+write_json <top-module>_synth.json
