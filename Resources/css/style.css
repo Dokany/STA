@@ -1,8 +1,8 @@
         body {
             background-image: url("../Images/background.jpg");
             background-color: #000000;
-		color: #FFFFFF;
-		margin-bottom:50px;
+            color: #FFFFFF;
+            margin-bottom: 50px;
         }
         
         h1 {
@@ -12,27 +12,32 @@
             text-decoration: none;
         }
         
-	h2 {
+        h2 {
             font-family: Arial;
             color: white;
             font-size: 32px;
             text-decoration: none;
         }
+        
         p {
             font-family: Arial;
             font-size: 24px;
             color: #FFFFFF;
         }
-
+        
+        a {
+            text-decoration: none;
+        }
+        
         footer {
-    position:absolute;
-    display:block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    position:fixed;
-    bottom:0;
-    width:100%;
-}
+            position: absolute;
+            display: block;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
         
         .btn {
             font-size: 18px;
@@ -50,55 +55,103 @@
             -moz-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
             box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
         }
-
+        
         .home {
             background-image: url("../Images/background.jpg");
         }
-
-header{
-	width:100%;
-	display:inline-block;
-	font-size:12px;
-}
-.hamburger{
-  background:none;
-  position:absolute;
-  top:0;
-  right:0;
-  line-height:45px;
-  padding:5px 5px 5px 5px;
-  color:#FFFFFF;
-  border:0;
-  font-size:2.8em;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:10000000000000;
-}
-.cross{
-  background:none;
-  position:absolute;
-  top:10px;
-  right:0;
-  padding:5px 5px 5px 5px;
-  color:#39A8DC;
-  border:0;
-  font-size:7em;
-  line-height:65px;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:10000000000000;
-}
-.menu{z-index:1000000; font-weight:bold; top: 45px; right: 0; width:20%; background:rgba(0,0,0,0.75); position:absolute; text-align:center; font-size:18px;}
-.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
-.menu li {display: block;   padding:15px 0 15px 0; }
-.menu li:hover{ background:#FFFFFF; }
-.menu ul li a { text-decoration:none;  margin: 0px; color:#39A8DC;}
-.menu ul li a:hover {  color: #39A8DC; text-decoration:none;}
-.menu a{text-decoration:none; color:#39A8DC;}
-.menu a:hover{text-decoration:none; color:#39A8DC;}
-.menu .here { color: red; cursor: none;}
-.menu .here:hover { color: red;}
-
-
+        
+        header {
+            width: 100%;
+            display: inline-block;
+            font-size: 12px;
+        }
+        
+        .hamburger {
+            background: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            line-height: 45px;
+            padding: 5px 5px 5px 5px;
+            color: #FFFFFF;
+            border: 0;
+            font-size: 2.8em;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+            z-index: 10000000000000;
+        }
+        
+        .cross {
+            background: none;
+            position: absolute;
+            top: 10px;
+            right: 0;
+            padding: 5px 5px 5px 5px;
+            color: #39A8DC;
+            border: 0;
+            font-size: 7em;
+            line-height: 65px;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+            z-index: 10000000000000;
+        }
+        
+        .menu {
+            z-index: 1000000;
+            font-weight: bold;
+            top: 45px;
+            right: 0;
+            width: 20%;
+            background: rgba(0, 0, 0, 0.75);
+            position: absolute;
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        .menu ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            list-style-image: none;
+        }
+        
+        .menu li {
+            display: block;
+            padding: 15px 0 15px 0;
+        }
+        
+        .menu li:hover {
+            background: #FFFFFF;
+        }
+        
+        .menu ul li a {
+            text-decoration: none;
+            margin: 0px;
+            color: #39A8DC;
+        }
+        
+        .menu ul li a:hover {
+            color: #39A8DC;
+            text-decoration: none;
+        }
+        
+        .menu a {
+            text-decoration: none;
+            color: #39A8DC;
+        }
+        
+        .menu a:hover {
+            text-decoration: none;
+            color: #39A8DC;
+        }
+        
+        .menu .here {
+            color: red;
+            cursor: none;
+        }
+        
+        .menu .here:hover {
+            color: red;
+        }
