@@ -288,10 +288,10 @@
                                    } else {
                                        if (!Celliez[cell_i].reg) {
 
-                                           document.write("<br><b style=\"color:#39A8DC;\">", "Path: </b> ", "Input ", Inputs[input_i].name, " --> ", Celliez[cell_i].name);
+                                           document.write("<br><b style=\"color:#39A8DC;\">", "Path: </b> ", "Input ", Inputs[input_i].name, "<b style=\"color: yellow;\"> → </b>", Celliez[cell_i].name);
                                            check_celliez_connect(Celliez, Celliez[cell_i], Outputs, cell_i, input_i);
                                        } else
-                                           document.write("<br><b style=\"color:#39A8DC;\">", "Path: </b> ", "Input ", Inputs[input_i].name, " --> DPin", " to <i>Register</i><b style=\"color: yellow;\"> → </b>End<br/>");
+                                           document.write("<br><b style=\"color:#39A8DC;\">", "Path: </b> ", "Input ", Inputs[input_i].name, "<b style=\"color: yellow;\"> → </b>DPin", " to <i>Register</i><b style=\"color: yellow;\"> → </b>End<br/>");
                                    }
                                }
                                //if(!Celliez[cell_i].reg)
@@ -318,7 +318,7 @@
                //          //ok so we put our name for our thing..and we asscoaite it with our struct data structure itsself for our usages.
                //          Graph.addNode(Outputs[output_i].name, Outputs[output_i]);
                //          Graph.addEdge(Celliez[cell_i].name, Outputs[output_i].name);
-               //          document.write(Celliez[cell_i].name, " --> ",Outputs[output_i].name,  "<br>");
+               //          document.write(Celliez[cell_i].name, "<b style=\"color: yellow;\"> → </b>",Outputs[output_i].name,  "<br>");
 
                //      }
 
