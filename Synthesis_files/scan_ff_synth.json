@@ -3,6 +3,7 @@
   "modules": {
     "Scan_FF": {
       "attributes": {
+        "top": 1,
         "src": "scan_ff.v:3"
       },
       "ports": {
@@ -28,42 +29,70 @@
         }
       },
       "cells": {
-        "$ternary$scan_ff.v:13$1": {
+        "$abc$50$auto$blifparse.cc:286:parse_blif$51": {
           "hide_name": 1,
-          "type": "$mux",
+          "type": "INVX1",
           "parameters": {
-            "WIDTH": 1
           },
           "attributes": {
-            "src": "scan_ff.v:13"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "S": "input",
-            "Y": "output"
           },
           "connections": {
             "A": [ 5 ],
-            "B": [ 4 ],
-            "S": [ 3 ],
             "Y": [ 7 ]
+          }
+        },
+        "$abc$50$auto$blifparse.cc:286:parse_blif$52": {
+          "hide_name": 1,
+          "type": "NAND2X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 3 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$abc$50$auto$blifparse.cc:286:parse_blif$53": {
+          "hide_name": 1,
+          "type": "OAI21X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 7 ],
+            "C": [ 8 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$49": {
+          "hide_name": 1,
+          "type": "DFFNEGX1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 9 ],
+            "Q": [ 6 ]
           }
         }
       },
       "netnames": {
-        "$0\\q[0:0]": {
-          "hide_name": 1,
-          "bits": [ 8 ],
-          "attributes": {
-            "src": "scan_ff.v:15"
-          }
-        },
-        "$ternary$scan_ff.v:13$1_Y": {
+        "$abc$50$n5": {
           "hide_name": 1,
           "bits": [ 7 ],
           "attributes": {
-            "src": "scan_ff.v:13"
+          }
+        },
+        "$abc$50$n6": {
+          "hide_name": 1,
+          "bits": [ 8 ],
+          "attributes": {
           }
         },
         "clk": {
@@ -82,7 +111,7 @@
         },
         "f": {
           "hide_name": 0,
-          "bits": [ 7 ],
+          "bits": [ 9 ],
           "attributes": {
             "src": "scan_ff.v:10"
           }
