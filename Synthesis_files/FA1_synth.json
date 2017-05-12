@@ -1,7 +1,7 @@
 {
   "creator": "Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-OIL3SR/yosys-0.7=. -fstack-protector-strong -fPIC -Os)",
   "modules": {
-    "fulladder": {
+    "FA1": {
       "attributes": {
         "top": 1,
         "src": "FA1.v:3"
@@ -29,68 +29,167 @@
         }
       },
       "cells": {
-        "$add$FA1.v:5$3": {
+        "$abc$13195$auto$blifparse.cc:286:parse_blif$13196": {
           "hide_name": 1,
-          "type": "$add",
+          "type": "NAND2X1",
           "parameters": {
-            "A_SIGNED": 0,
-            "A_WIDTH": 1,
-            "B_SIGNED": 0,
-            "B_WIDTH": 1,
-            "Y_WIDTH": 2
           },
           "attributes": {
-            "src": "FA1.v:5"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
           },
           "connections": {
             "A": [ 4 ],
             "B": [ 3 ],
-            "Y": [ 7, 8 ]
+            "Y": [ 7 ]
           }
         },
-        "$add$FA1.v:5$4": {
+        "$abc$13195$auto$blifparse.cc:286:parse_blif$13197": {
           "hide_name": 1,
-          "type": "$add",
+          "type": "OR2X2",
           "parameters": {
-            "A_SIGNED": 0,
-            "A_WIDTH": 2,
-            "B_SIGNED": 0,
-            "B_WIDTH": 1,
-            "Y_WIDTH": 2
           },
           "attributes": {
-            "src": "FA1.v:5"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
           },
           "connections": {
-            "A": [ 7, 8 ],
-            "B": [ 2 ],
-            "Y": [ 5, 6 ]
+            "A": [ 4 ],
+            "B": [ 3 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$abc$13195$auto$blifparse.cc:286:parse_blif$13198": {
+          "hide_name": 1,
+          "type": "NAND3X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 7 ],
+            "C": [ 8 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$abc$13195$auto$blifparse.cc:286:parse_blif$13199": {
+          "hide_name": 1,
+          "type": "INVX1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 2 ],
+            "Y": [ 10 ]
+          }
+        },
+        "$abc$13195$auto$blifparse.cc:286:parse_blif$13200": {
+          "hide_name": 1,
+          "type": "AND2X2",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 3 ],
+            "Y": [ 11 ]
+          }
+        },
+        "$abc$13195$auto$blifparse.cc:286:parse_blif$13201": {
+          "hide_name": 1,
+          "type": "NOR2X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 3 ],
+            "Y": [ 12 ]
+          }
+        },
+        "$abc$13195$auto$blifparse.cc:286:parse_blif$13202": {
+          "hide_name": 1,
+          "type": "OAI21X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 11 ],
+            "C": [ 10 ],
+            "Y": [ 13 ]
+          }
+        },
+        "$abc$13195$auto$blifparse.cc:286:parse_blif$13203": {
+          "hide_name": 1,
+          "type": "AND2X2",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 13 ],
+            "Y": [ 5 ]
+          }
+        },
+        "$abc$13195$auto$blifparse.cc:286:parse_blif$13204": {
+          "hide_name": 1,
+          "type": "OAI21X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 12 ],
+            "C": [ 7 ],
+            "Y": [ 6 ]
           }
         }
       },
       "netnames": {
-        "$add$FA1.v:5$3_Y": {
+        "$abc$13195$n10": {
           "hide_name": 1,
-          "bits": [ 7, 8 ],
+          "bits": [ 11 ],
           "attributes": {
-            "src": "FA1.v:5"
           }
         },
-        "$add$FA1.v:5$4_Y": {
+        "$abc$13195$n11": {
           "hide_name": 1,
-          "bits": [ 5, 6 ],
+          "bits": [ 12 ],
           "attributes": {
-            "src": "FA1.v:5"
+          }
+        },
+        "$abc$13195$n12": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+          }
+        },
+        "$abc$13195$n6": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+          }
+        },
+        "$abc$13195$n7_1": {
+          "hide_name": 1,
+          "bits": [ 8 ],
+          "attributes": {
+          }
+        },
+        "$abc$13195$n8": {
+          "hide_name": 1,
+          "bits": [ 9 ],
+          "attributes": {
+          }
+        },
+        "$abc$13195$n9": {
+          "hide_name": 1,
+          "bits": [ 10 ],
+          "attributes": {
           }
         },
         "A": {
