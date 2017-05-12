@@ -56,11 +56,12 @@
 <body class="home">
     <label><p>Upload Standard Cell Library Liberty File</p></label>
     <input class="file" type="file" accept=".json" id="lib_file" />
-    <input class="btn" type="button" value="Upload" onclick="parse_lib()" />
+    <input class="btn" type="button" value="Upload" />
+    <!--onclick="parse_lib()" />-->
 
     <label><p>Upload Circuit Synthesis File</p></label>
     <input class="file" type="file" accept=".json" id="synth_file" />
-    <input class="btn" type="button" value="Analyze" onclick="main_func()" />
+    <input class="btn" type="button" value="Generate Critical Path" onclick="main_func()" />
 
     <!--<br/><input class="btn" type="button" value="Generate Critical Path" onclick="cpm()" />-->
 

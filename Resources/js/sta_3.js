@@ -1,38 +1,42 @@
   // Deliverable 3
-
   var Graph = new graphlib.Digraph();
   var graphy = new graphlib.Graph({ directed: true });
   var count = 1;
 
-  function parse_lib() {
-      var lib = document.getElementById("lib_file");
-      var reader = new FileReader();
-      reader.readAsText(lib.files[0]);
-      reader.onload = function() {
-          var text = reader.result;
-          var json = JSON.parse(text);
+  //   function parse_lib() {
+  //       var lib = document.getElementById("lib_file");
+  //       var reader = new FileReader();
+  //       reader.readAsText(lib.files[0]);
+  //       reader.onload = function() {
+  //           var text = reader.result;
+  //           var json = JSON.parse(text);
 
-          var lib_cells = []
+  //           var lib_cells = []
 
-          for (cell in json.cells) {
-              lib_cells.push({
+  //           for (cell in json.cells) {
+  //               lib_cells.push({
 
-              });
-          }
-      }
-  }
+  //               });
+  //           }
+  //       }
+  //   }
 
-  function cpm() {
+  //   function cpm() {
 
-  }
+  //   }
 
   function eliminate_reps(Cellyy, Celliezz, cellyindex) {
+      // document.write("hi!");//, Celliezz[cellyindex].name);
+
       if (cellyindex == 0) { return Cellyy; } else {
           for (var i = 0; i < cellyindex; i++) {
+
+              //document.write("<br> checking: ", Cellyy, " against: ", Celliezz[i].name, "<br>");
 
               if (Cellyy.toString() == Celliezz[i].name.toString()) {
 
                   newname = Cellyy + count.toString();
+                  //document.write("hi!", newname);
                   count++;
                   return newname;
               }
@@ -56,14 +60,14 @@
 
               Graph.addEdge(null, Celly.name, Outputs[ii].name);
               if (Outputs[ii].type == 'reg') {
-                  //document.write("<b style=\"color: yellow;\"> → </b>", Outputs[ii].name, " to <i>Register</i><b style=\"color: yellow;\"> → </b>End<br/>");
+                  document.write("");
               } else
 
 
-              //document.write("<b style=\"color: yellow;\"> → </b>", Outputs[ii].name, " to <i>Output</i><b style=\"color: yellow;\"> → </b>End<br/>");
+                  document.write("");
 
 
-                  return;
+              return;
           }
       }
 
@@ -80,7 +84,7 @@
 
                   Graph.addEdge(null, Celly.name, Celliez[outcell].name);
 
-                  //document.write("<b style=\"color: yellow;\"> → </b>", Celliez[outcell].name);
+                  // document.write( "<b style=\"color: yellow;\"> → </b>", Celliez[outcell].name );
 
 
                   check_celliez_connect(Celliez, Celliez[outcell], Outputs, outcell);
@@ -116,8 +120,6 @@
               var Inputs = [];
               var Outputs = [];
               var InputCount = 0;
-              var bities = [];
-              var flag;
               var OutputCount = 0;
               for (portt in traverse_ports) //so here we are in the ports. we have an array of inputs and outputs. each of these we will push inside their: 
               //name: their actual name
@@ -125,40 +127,27 @@
               //type: is it an input or output?
               //you can reference this by going Input[i].name, type whatever.
               {
-                  bities = traverse_ports[portt]["bits"];
-                  flag = (bities.length > 1);
                   //document.write("<br><b style=\"color:#39A8DC;\">", "Analyzing Port:</b> ", portt, "</br>");
-
                   if (traverse_ports[portt]["direction"] == "input") {
                       Inputs.push({
                           name: portt,
                           bits: traverse_ports[portt]["bits"],
-                          type: 'input',
-                          NeedsbitsArr: flag,
-                          bitiez: bities
+                          type: 'input'
                       });
-                      if (!Inputs[InputCount].NeedsbitsArr)
-                      //document.write("has single beta3 of: ", Inputs[InputCount].bits, "<br>");
-                      else
-
-                      //document.write("Port: ", Inputs[InputCount].name, " is an ", Inputs[InputCount].type, "<br> bits are: ", Inputs[InputCount].bits, "<br>");
-                          InputCount++;
+                      //document.write("Port: ", Inputs[InputCount].name, " is an ", Inputs[InputCount].type, "<br>" );
+                      InputCount++;
                   } else
                   if (traverse_ports[portt]["direction"] == "output") {
 
                       Outputs.push({
                           name: portt,
                           bits: traverse_ports[portt]["bits"],
-                          type: 'output',
-                          NeedsbitsArr: flag,
-                          bitiez: bities
+                          type: 'output'
                       });
-                      if (!Outputs[OutputCount].NeedsbitsArr)
-                      //document.write("has single beta3 of: ", Outputs[OutputCount].bits, "<br>");
-                      else
 
-                      //document.write("Port: ", Outputs[OutputCount].name, " is an ", Outputs[OutputCount].type, "<br>");
-                          OutputCount++;
+
+                      // document.write("Port: ", Outputs[OutputCount].name, " is an ", Outputs[OutputCount].type, "<br>");
+                      OutputCount++;
 
                   }
 
@@ -256,12 +245,8 @@
 
 
 
-                  //document.write("<br><b style=\"color:#39A8DC;\">Cell:</b> ", Celliez[HowManyCells].name, "<br/>Found connections: <br/>");
-                  for (var ii = 0; ii < Celliez[HowManyCells].amount; ii++) {
+                  // document.write("<br><b style=\"color:#39A8DC;\">Cell:</b> ", Celliez[HowManyCells].name, "<br/>Found connections: <br/>");
 
-                      // document.write(Celliez[HowManyCells].connections[ii], "<br>");
-                  }
-                  //document.write("its output is on port: ", Celliez[HowManyCells].output, "<br>");
                   HowManyCells++;
 
 
@@ -279,39 +264,35 @@
 
 
           for (var input_i = 0; input_i < Inputs.length; input_i++) {
-              //document.write("input cehcked: ", Inputs[input_i].name);
               for (var cell_i = 0; cell_i < Celliez.length; cell_i++) {
                   for (var cell_con_i = 0; cell_con_i < Celliez[cell_i].amount; cell_con_i++) {
-
-                      for (var inputbit = 0; inputbit < Inputs[input_i].bits.length; inputbit++) {
-                          /*
+                      /*
                         document.write("Checking cell: ", Inputs[input_i].bits, " against connect ", Celliez[cell_i].connections[cell_con_i], " in cell: ",Celliez[cell_i].name); */
-                          if (Inputs[input_i].bits[inputbit].toString() == Celliez[cell_i].connections[cell_con_i].toString()) {
+                      if (Inputs[input_i].bits.toString() == Celliez[cell_i].connections[cell_con_i].toString()) {
 
-                              //ok so we put our name for our thing..and we asscoaite it with our struct data structure itsself for our usages.
-                              if (!Graph.hasNode(Inputs[input_i].name))
-                                  Graph.addNode(Inputs[input_i].name, Inputs[input_i]);
-                              if (!Graph.hasNode(Celliez[cell_i].name))
-                                  Graph.addNode(Celliez[cell_i].name, Celliez[cell_i]);
+                          //ok so we put our name for our thing..and we asscoaite it with our struct data structure itsself for our usages.
+                          if (!Graph.hasNode(Inputs[input_i].name))
+                              Graph.addNode(Inputs[input_i].name, Inputs[input_i]);
+                          if (!Graph.hasNode(Celliez[cell_i].name))
+                              Graph.addNode(Celliez[cell_i].name, Celliez[cell_i]);
 
-                              Graph.addEdge(null, Inputs[input_i].name, Celliez[cell_i].name);
+                          Graph.addEdge(null, Inputs[input_i].name, Celliez[cell_i].name);
 
-                              if (Inputs[input_i].type == 'reg') {
-                                  if (!Celliez[cell_i].reg)
-                                  //document.write("<br/><b style=\"color:#39A8DC;\">Path: </b>Start<b style=\"color: yellow;\"> → </b><i>Register</i> ", Inputs[input_i].name, "<b style=\"color: yellow;\"> → </b>", Celliez[cell_i].name);
-                                  else
-                                  //document.write("<br><b style=\"color:#39A8DC;\">", "Path: </b> ", "Register ", Inputs[input_i].name);
-                                      check_celliez_connect(Celliez, Celliez[cell_i], Outputs, cell_i, input_i);
+                          if (Inputs[input_i].type == 'reg') {
+                              if (!Celliez[cell_i].reg)
+                                  document.write("");
+                              else
+                                  document.write("");
 
-                              } else {
-                                  if (!Celliez[cell_i].reg) {
+                          } else {
+                              if (!Celliez[cell_i].reg) {
 
-                                      //document.write("<br><b style=\"color:#39A8DC;\">", "Path: </b> ", "Input ", Inputs[input_i].name, "<b style=\"color: yellow;\"> → </b>", Celliez[cell_i].name);
-                                      check_celliez_connect(Celliez, Celliez[cell_i], Outputs, cell_i, input_i);
-                                  } else
-                                  //document.write("<br><b style=\"color:#39A8DC;\">", "Path: </b> ", "Input ", Inputs[input_i].name, "<b style=\"color: yellow;\"> → </b>DPin", " to <i>Register</i><b style=\"color: yellow;\"> → </b>End<br/>");
-                              }
+                                  //document.write("<br><b style=\"color:#39A8DC;\">", "Path: </b> ", "Input ", Inputs[input_i].name, " --> ", Celliez[cell_i].name);
+                                  check_celliez_connect(Celliez, Celliez[cell_i], Outputs, cell_i, input_i);
+                              } else
+                                  document.write("");
                           }
+
                           //if(!Celliez[cell_i].reg)
 
                           //print_cell();
@@ -324,6 +305,9 @@
 
           //we checked each input is going to what...now what is the what going to?
 
+
+
+
           // for (var output_i = 0; output_i < Outputs.length; output_i++) {
           //  for (var cell_i = 0; cell_i < Celliez.length; cell_i++) {                        
           //          /*
@@ -333,11 +317,16 @@
           //          //ok so we put our name for our thing..and we asscoaite it with our struct data structure itsself for our usages.
           //          Graph.addNode(Outputs[output_i].name, Outputs[output_i]);
           //          Graph.addEdge(Celliez[cell_i].name, Outputs[output_i].name);
-          //          document.write(Celliez[cell_i].name, "<b style=\"color: yellow;\"> → </b>",Outputs[output_i].name,  "<br>");
+          //          document.write(Celliez[cell_i].name, " --> ",Outputs[output_i].name,  "<br>");
 
           //      }
+
+
+
           //  }
           // }
+
+
 
 
           var nodeMap = {}
@@ -355,8 +344,8 @@
           });
 
           // D3 stuff starts here
-          var width = 600,
-              height = 500
+          var width = 1000,
+              height = 1000
 
           var svg = d3.select("body").append("svg")
               .attr("width", width)
@@ -427,11 +416,6 @@
               });
           });
 
-          var trav = graphlib.json.write(graphy);
-          var hi = JSON.stringify(trav);
-
-
-          document.write(hi, " <br> ");
 
       }
 

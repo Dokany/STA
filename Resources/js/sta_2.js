@@ -346,8 +346,8 @@
           });
 
           // D3 stuff starts here
-          var width = 600,
-              height = 500
+          var width = 1000,
+              height = 1000
 
           var svg = d3.select("body").append("svg")
               .attr("width", width)
