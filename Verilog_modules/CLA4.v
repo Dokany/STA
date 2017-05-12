@@ -1,8 +1,3 @@
-// CSCE 230 - Assignment 3
-// file: CLA4.v
-// author: Yasmin ElDokany
-// ID no. 900131538
-
 `timescale 1ns/1ns
 
 // 4-bit Carry Lookahead Adder
