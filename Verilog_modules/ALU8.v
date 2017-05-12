@@ -1,8 +1,3 @@
-// CSCE 230 - Assignment 3
-// file: ALU8.v
-// author: Yasmin ElDokany
-// ID no. 900131538
-
 `timescale 1ns/1ns
 
 // 8-bit Arithmetic Logic Unit with 3-bit Selector
