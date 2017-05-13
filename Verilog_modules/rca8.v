@@ -2,6 +2,12 @@
 
 // 8-bit ripple carry adder
 
+module FA1 (input x,input y,input cin,output A, output cout);
+ 
+assign {cout,A} =  cin + y + x;
+ 
+endmodule
+
 module rca4 (
     input [3:0] a,
     input [3:0] b,
