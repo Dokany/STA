@@ -100,6 +100,7 @@
         
         .menu {
             z-index: 1000000;
+            font-family: Arial;
             font-weight: bold;
             top: 45px;
             right: 0;
@@ -148,10 +149,14 @@
         }
         
         .menu .here {
-            color: red;
+            color: #39A8DC;
+            border-right: 15px solid #39A8DC;
             cursor: none;
         }
         
         .menu .here:hover {
-            color: red;
+            color: #39A8DC;
+            border-right: 15px solid #39A8DC;
+            cursor: none;
+            background: rgba(0, 0, 0
         }
