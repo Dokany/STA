@@ -1,0 +1,503 @@
+{
+  "creator": "Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-OIL3SR/yosys-0.7=. -fstack-protector-strong -fPIC -Os)",
+  "modules": {
+    "UniShiftReg": {
+      "attributes": {
+        "top": 1,
+        "src": "UniShiftReg.v:3"
+      },
+      "ports": {
+        "S": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "in": {
+          "direction": "input",
+          "bits": [ 4, 5, 6, 7 ]
+        },
+        "Q": {
+          "direction": "output",
+          "bits": [ 8, 9, 10, 11 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 12 ]
+        },
+        "reset": {
+          "direction": "input",
+          "bits": [ 13 ]
+        }
+      },
+      "cells": {
+        "$abc$169$auto$blifparse.cc:286:parse_blif$170": {
+          "hide_name": 1,
+          "type": "AND2X2",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 3 ],
+            "Y": [ 14 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$171": {
+          "hide_name": 1,
+          "type": "NOR2X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 3 ],
+            "Y": [ 15 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$172": {
+          "hide_name": 1,
+          "type": "AOI22X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 15 ],
+            "B": [ 9 ],
+            "C": [ 5 ],
+            "D": [ 14 ],
+            "Y": [ 16 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$173": {
+          "hide_name": 1,
+          "type": "INVX1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 2 ],
+            "Y": [ 17 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$174": {
+          "hide_name": 1,
+          "type": "NAND3X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 8 ],
+            "C": [ 17 ],
+            "Y": [ 18 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$175": {
+          "hide_name": 1,
+          "type": "INVX1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 19 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$176": {
+          "hide_name": 1,
+          "type": "NAND3X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 10 ],
+            "C": [ 19 ],
+            "Y": [ 20 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$177": {
+          "hide_name": 1,
+          "type": "AND2X2",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 20 ],
+            "Y": [ 21 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$178": {
+          "hide_name": 1,
+          "type": "AOI21X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 21 ],
+            "B": [ 16 ],
+            "C": [ 13 ],
+            "Y": [ 22 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$179": {
+          "hide_name": 1,
+          "type": "NAND3X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 9 ],
+            "C": [ 19 ],
+            "Y": [ 23 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$180": {
+          "hide_name": 1,
+          "type": "AOI22X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 15 ],
+            "B": [ 8 ],
+            "C": [ 4 ],
+            "D": [ 14 ],
+            "Y": [ 24 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$181": {
+          "hide_name": 1,
+          "type": "AOI21X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 24 ],
+            "B": [ 23 ],
+            "C": [ 13 ],
+            "Y": [ 25 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$182": {
+          "hide_name": 1,
+          "type": "AOI22X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 15 ],
+            "B": [ 10 ],
+            "C": [ 6 ],
+            "D": [ 14 ],
+            "Y": [ 26 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$183": {
+          "hide_name": 1,
+          "type": "NAND3X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 9 ],
+            "C": [ 17 ],
+            "Y": [ 27 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$184": {
+          "hide_name": 1,
+          "type": "NAND3X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 11 ],
+            "C": [ 19 ],
+            "Y": [ 28 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$185": {
+          "hide_name": 1,
+          "type": "AND2X2",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 27 ],
+            "B": [ 28 ],
+            "Y": [ 29 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$186": {
+          "hide_name": 1,
+          "type": "AOI21X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 29 ],
+            "B": [ 26 ],
+            "C": [ 13 ],
+            "Y": [ 30 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$187": {
+          "hide_name": 1,
+          "type": "NAND3X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 10 ],
+            "C": [ 17 ],
+            "Y": [ 31 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$188": {
+          "hide_name": 1,
+          "type": "AOI22X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 15 ],
+            "B": [ 11 ],
+            "C": [ 7 ],
+            "D": [ 14 ],
+            "Y": [ 32 ]
+          }
+        },
+        "$abc$169$auto$blifparse.cc:286:parse_blif$189": {
+          "hide_name": 1,
+          "type": "AOI21X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 32 ],
+            "B": [ 31 ],
+            "C": [ 13 ],
+            "Y": [ 33 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$165": {
+          "hide_name": 1,
+          "type": "DFFPOSX1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "CLK": [ 12 ],
+            "D": [ 25 ],
+            "Q": [ 8 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$166": {
+          "hide_name": 1,
+          "type": "DFFPOSX1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "CLK": [ 12 ],
+            "D": [ 22 ],
+            "Q": [ 9 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$167": {
+          "hide_name": 1,
+          "type": "DFFPOSX1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "CLK": [ 12 ],
+            "D": [ 30 ],
+            "Q": [ 10 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$168": {
+          "hide_name": 1,
+          "type": "DFFPOSX1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "CLK": [ 12 ],
+            "D": [ 33 ],
+            "Q": [ 11 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\Q[3:0]": {
+          "hide_name": 1,
+          "bits": [ 25, 22, 30, 33 ],
+          "attributes": {
+            "src": "UniShiftReg.v:12"
+          }
+        },
+        "$abc$169$n16": {
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+          }
+        },
+        "$abc$169$n17_1": {
+          "hide_name": 1,
+          "bits": [ 15 ],
+          "attributes": {
+          }
+        },
+        "$abc$169$n18_1": {
+          "hide_name": 1,
+          "bits": [ 16 ],
+          "attributes": {
+          }
+        },
+        "$abc$169$n19_1": {
+          "hide_name": 1,
+          "bits": [ 17 ],
+          "attributes": {
+          }
+        },
+        "$abc$169$n20": {
+          "hide_name": 1,
+          "bits": [ 18 ],
+          "attributes": {
+          }
+        },
+        "$abc$169$n21": {
+          "hide_name": 1,
+          "bits": [ 19 ],
+          "attributes": {
+          }
+        },
+        "$abc$169$n22": {
+          "hide_name": 1,
+          "bits": [ 20 ],
+          "attributes": {
+          }
+        },
+        "$abc$169$n23": {
+          "hide_name": 1,
+          "bits": [ 21 ],
+          "attributes": {
+          }
+        },
+        "$abc$169$n25_1": {
+          "hide_name": 1,
+          "bits": [ 23 ],
+          "attributes": {
+          }
+        },
+        "$abc$169$n26": {
+          "hide_name": 1,
+          "bits": [ 24 ],
+          "attributes": {
+          }
+        },
+        "$abc$169$n28_1": {
+          "hide_name": 1,
+          "bits": [ 26 ],
+          "attributes": {
+          }
+        },
+        "$abc$169$n29": {
+          "hide_name": 1,
+          "bits": [ 27 ],
+          "attributes": {
+          }
+        },
+        "$abc$169$n30": {
+          "hide_name": 1,
+          "bits": [ 28 ],
+          "attributes": {
+          }
+        },
+        "$abc$169$n31_1": {
+          "hide_name": 1,
+          "bits": [ 29 ],
+          "attributes": {
+          }
+        },
+        "$abc$169$n33": {
+          "hide_name": 1,
+          "bits": [ 31 ],
+          "attributes": {
+          }
+        },
+        "$abc$169$n34": {
+          "hide_name": 1,
+          "bits": [ 32 ],
+          "attributes": {
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10, 11 ],
+          "attributes": {
+            "src": "UniShiftReg.v:6"
+          }
+        },
+        "S": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+            "src": "UniShiftReg.v:4"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "UniShiftReg.v:7"
+          }
+        },
+        "in": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7 ],
+          "attributes": {
+            "src": "UniShiftReg.v:5"
+          }
+        },
+        "reset": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "UniShiftReg.v:8"
+          }
+        }
+      }
+    }
+  }
+}
