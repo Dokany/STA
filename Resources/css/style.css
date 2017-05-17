@@ -178,3 +178,9 @@
             cursor: default;
             background: rgba(0, 0, 0, 0.75);
         }
+        
+        footer a {
+            color: #39A8DC;
+            font-family: s_regular, Arial;
+            text-decoration: none;
+        }
