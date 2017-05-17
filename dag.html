@@ -30,47 +30,48 @@
 
 </head>
 
-<header>
-    <a href="index.html"><label><center><b><h1>Static Timing Analyzer</h1></b></center></label><br/></a>
-    <label><center><b><h2>Static Timing Analysis | DAG Generator</h2></b></center></label><br/>
-    <button class="hamburger">&#9776;</button>
-    <button class="cross">&#735;</button>
+<button class="hamburger">&#9776;</button>
+<button class="cross">&#735;</button>
 
-    <div class="menu">
-        <ul>
-            <a href="#">
-                <li>File Formats</li>
-            </a>
-            <a href="dag.html">
-                <li class="here">DAG Generator</li>
-            </a>
-            <a href="cpm.html">
-                <li>Critical Path Finder</li>
-            </a>
-            <a href="#">
-                <li>Timing Constraints</li>
-            </a>
-            <a href="about.html">
-                <li>About Project</li>
-            </a>
-        </ul>
-    </div>
+<div class="menu">
+    <ul>
+        <a href="#">
+            <li>File Formats</li>
+        </a>
+        <a href="dag.html">
+            <li class="here">DAG Generator</li>
+        </a>
+        <a href="cpm.html">
+            <li>Critical Path Finder</li>
+        </a>
+        <a href="#">
+            <li>Timing Constraints</li>
+        </a>
+        <a href="about.html">
+            <li>About Project</li>
+        </a>
+    </ul>
+</div>
+<div class="page">
+    <header>
+        <a href="index.html"><label><center><b><h1>Static Timing Analyzer</h1></b></center></label><br/></a>
+        <label><center><b><h2>Static Timing Analysis | DAG Generator</h2></b></center></label><br/>
+    </header>
 
-</header>
+    <body>
 
-<body class="home">
+        <label><p>Upload Circuit Synthesis File</p></label>
+        <input class="file" type="file" accept=".json" id="synth_file" />
+        <input class="btn" type="button" value="Analyze" onclick="main_func()" />
 
-    <label><p>Upload Circuit Synthesis File</p></label>
-    <input class="file" type="file" accept=".json" id="synth_file" />
-    <input class="btn" type="button" value="Analyze" onclick="main_func()" />
+        <!--Backend Script-->
+        <script src="./Resources/js/sta_2.js"></script>
+        <script src="./Resources/js/hamburger_menu.js"></script>
+    </body>
 
-    <!--Backend Script-->
-    <script src="./Resources/js/sta_2.js"></script>
-    <script src="./Resources/js/hamburger_menu.js"></script>
-</body>
-
-<footer>
-    <small><center>&copy Copyright 2017, <a href="group10.html">Group 10</a></center></small>
-</footer>
+    <footer>
+        <small><center>&copy Copyright 2017, <a href="group10.html">Group 10</a></center></small>
+    </footer>
+</div>
 
 </html>

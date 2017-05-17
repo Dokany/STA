@@ -17,44 +17,47 @@
 
 </head>
 
-<header>
-    <label><center><b><h1>About Static Timing Analysis</h1></b></center></label><br/>
-    <button class="hamburger">&#9776;</button>
-    <button class="cross">&#735;</button>
-</header>
+<button class="hamburger">&#9776;</button>
+<button class="cross">&#735;</button>
 
-<body class="home">
+<div class="menu">
+    <ul>
+        <a href="#">
+            <li>File Formats</li>
+        </a>
+        <a href="dag.html">
+            <li>DAG Generator</li>
+        </a>
+        <a href="cpm.html">
+            <li>Critical Path Finder</li>
+        </a>
+        <a href="#">
+            <li>Timing Constraints</li>
+        </a>
+        <a href="about.html">
+            <li class="here">About Project</li>
+        </a>
+    </ul>
+</div>
+<div class="page">
+    <header>
+        <label><center><b><h1>About Static Timing Analysis</h1></b></center></label><br/>
 
-    <p>
-        This is a static timing analysis tool that gets the Verilog gate level net list of a digital circuit, the library of the cells used in the circuit, the net capacitances file, the clocks skew file and timing constraints (the clock period, input delays
-        and output delays). The tool checks all the timing paths and reports the violating timing paths, if any.
-    </p>
+    </header>
 
-    <div class="menu">
-        <ul>
-            <a href="#">
-                <li>File Formats</li>
-            </a>
-            <a href="dag.html">
-                <li>DAG Generator</li>
-            </a>
-            <a href="cpm.html">
-                <li>Critical Path Finder</li>
-            </a>
-            <a href="#">
-                <li>Timing Constraints</li>
-            </a>
-            <a href="about.html">
-                <li class="here">About Project</li>
-            </a>
-        </ul>
-    </div>
+    <body>
 
-    <script src="Resources/js/hamburger_menu.js"></script>
-</body>
+        <p>
+            This is a static timing analysis tool that gets the Verilog gate level net list of a digital circuit, the library of the cells used in the circuit, the net capacitances file, the clocks skew file and timing constraints (the clock period, input delays
+            and output delays). The tool checks all the timing paths and reports the violating timing paths, if any.
+        </p>
 
-<footer>
-    <small><center>&copy Copyright 2017, <a href="group10.html">Group 10</a></center></small>
-</footer>
+        <script src="Resources/js/hamburger_menu.js"></script>
+    </body>
+
+    <footer>
+        <small><center>&copy Copyright 2017, <a href="group10.html">Group 10</a></center></small>
+    </footer>
+</div>
 
 </html>

@@ -48,6 +48,11 @@
             font-family: s_regular, Arial;
         }
         
+        li {
+            color: #39A8DC;
+            font-size: 1em;
+        }
+        
         header {
             width: 100%;
             display: inline-block;
@@ -61,6 +66,17 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+        
+        footer a {
+            color: #39A8DC;
+            font-family: s_regular, Arial;
+            text-decoration: none;
+        }
+        
+        img {
+            width: auto;
+            height: 50%;
         }
         
         .btn {
@@ -80,10 +96,6 @@
             box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
         }
         
-        .home {
-            background-image: url("../Images/background.jpg");
-        }
-        
         .hamburger {
             background: none;
             position: absolute;
@@ -97,7 +109,7 @@
             font-weight: bold;
             cursor: pointer;
             outline: none;
-            z-index: 10000000000000;
+            z-index: 1000000;
         }
         
         .cross {
@@ -113,7 +125,7 @@
             font-weight: bold;
             cursor: pointer;
             outline: none;
-            z-index: 10000000000000;
+            z-index: 1000000;
         }
         
         .menu {
@@ -179,8 +191,24 @@
             background: rgba(0, 0, 0, 0.75);
         }
         
-        footer a {
-            color: #39A8DC;
-            font-family: s_regular, Arial;
-            text-decoration: none;
+        .names {
+            text-align: center;
+        }
+        
+        .filterBlack {
+            filter: blur(5px) grayscale(80%);
+            -webkit-filter: blur(5px) grayscale(80%);
+            -moz-filter: blur(5px) grayscale(80%);
+            -o-filter: blur(5px) grayscale(80%);
+            -ms-filter: blur(5px) grayscale(80%);
+            z-index: 10000000000000;
+        }
+        
+        .filterClear {
+            filter: blur(0px);
+            -webkit-filter: blur(0px);
+            -moz-filter: blur(0px);
+            -o-filter: blur(0px);
+            -ms-filter: blur(0px);
+            z-index: 10000000000000;
         }
