@@ -1,32 +1,56 @@
+        @font-face {
+            font-family: s_regular;
+            src: url("../Fonts/sansation_regular.eot");
+            src: url("../Fonts/sansation_regular.ttf") format('truetype');
+            src: url("../Fonts/sansation_regular.woff") format('woff');
+        }
+        
+        @font-face {
+            font-family: s_light;
+            src: url("../Fonts/sansation_light.eot");
+            src: url("../Fonts/sansation_light.ttf") format('truetype');
+            src: url("../Fonts/sansation_light.woff") format('woff');
+        }
+        
         body {
             background-image: url("../Images/background.jpg");
             background-color: #000000;
             color: #FFFFFF;
-            margin-bottom: 50px;
+            margin-bottom: 1.2em;
+            font-family: s_light, Arial;
         }
         
         h1 {
-            font-family: Arial;
+            font-family: s_regular, Arial;
             color: white;
-            font-size: 40px;
+            font-size: 2.5em;
             text-decoration: none;
         }
         
         h2 {
-            font-family: Arial;
+            font-family: s_light, Arial;
             color: white;
-            font-size: 32px;
+            font-size: 2em;
             text-decoration: none;
         }
         
         p {
-            font-family: Arial;
-            font-size: 24px;
+            font-family: s_light, Arial;
+            font-size: 1.2em;
             color: #FFFFFF;
         }
         
         a {
             text-decoration: none;
+        }
+        
+        button {
+            font-family: s_regular, Arial;
+        }
+        
+        header {
+            width: 100%;
+            display: inline-block;
         }
         
         footer {
@@ -40,7 +64,7 @@
         }
         
         .btn {
-            font-size: 18px;
+            font-size: 1em;
             cursor: pointer;
         }
         
@@ -48,7 +72,7 @@
             font-family: Arial;
             cursor: pointer;
             color: #000000;
-            font-size: 18px;
+            font-size: 1em;
             background: #ffffff;
             text-decoration: none;
             -webkit-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
@@ -60,12 +84,6 @@
             background-image: url("../Images/background.jpg");
         }
         
-        header {
-            width: 100%;
-            display: inline-block;
-            font-size: 12px;
-        }
-        
         .hamburger {
             background: none;
             position: absolute;
@@ -75,7 +93,7 @@
             padding: 5px 5px 5px 5px;
             color: #FFFFFF;
             border: 0;
-            font-size: 2.8em;
+            font-size: 3em;
             font-weight: bold;
             cursor: pointer;
             outline: none;
@@ -88,9 +106,9 @@
             top: 10px;
             right: 0;
             padding: 5px 5px 5px 5px;
-            color: #39A8DC;
+            color: #FFFFFF;
             border: 0;
-            font-size: 7em;
+            font-size: 6em;
             line-height: 65px;
             font-weight: bold;
             cursor: pointer;
@@ -100,7 +118,7 @@
         
         .menu {
             z-index: 1000000;
-            font-family: Arial;
+            font-family: s_light, Arial;
             font-weight: bold;
             top: 45px;
             right: 0;
