@@ -3,7 +3,7 @@
   var graphy = new graphlib.Graph({ directed: true });
   var count = 1;
 
-  function parse_lib() {
+  function find_delay(cell_name) {
       var lib = document.getElementById("lib_file");
       var reader = new FileReader();
       reader.readAsText(lib.files[0]);
@@ -13,17 +13,12 @@
 
           var lib_cells = []
 
-          for (cell in json.cells) {
-              lib_cells.push({
+          cell_dat = json.cells[property][cell_name]; // All cell data (check osu350.json file line 976)
 
-              });
-          }
+          // for each pin in cell_dat[pins] check if it has timing property (check osu350.json file line 997) and extract LUTs
+          // return delay
       }
   }
-
-  //   function cpm() {
-
-  //   }
 
   function eliminate_reps(Cellyy, Celliezz, cellyindex) {
       // document.write("hi!");//, Celliezz[cellyindex].name);
