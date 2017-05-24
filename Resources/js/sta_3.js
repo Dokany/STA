@@ -1,6 +1,5 @@
   // Deliverable 3
   var Graph = new graphlib.Digraph();
-  var graphy = new graphlib.Graph({ directed: true });
   var count = 1;
 
   function parse_lib() {
@@ -20,6 +19,25 @@
           }
       }
   }
+
+  function dfs(node, delay) {
+      var arrow = "<b style=\"color: yellow;\"> → </b>";
+
+      var end = end_node.filter(function(obj) {
+          return obj.bits == node.bits;
+      })[0];
+
+      if (end != null) {
+          var current_node = Graph.node(node);
+          path += (arrow + current_node.id);
+          var next_cells = Graph.successors(node);
+          for (cell in next_cells) dfs(cell, Graph, path, start, end_node);
+      } else {
+          path += (arrow + end.id + arrow + "End")
+          document.write("<br/>", "Path from ", start, " to ", end.type, ": ", path, "<br/>");
+      }
+  }
+
 
   //   function cpm() {
 
@@ -47,9 +65,6 @@
   };
 
   function check_celliez_connect(Celliez, Celly, Outputs, start, pathy) {
-
-
-
       for (var ii = 0; ii < Outputs.length; ii++) {
           if (Celly.output.toString() == Outputs[ii].bits.toString()) {
 
@@ -62,11 +77,7 @@
               if (Outputs[ii].type == 'reg') {
                   document.write("");
               } else
-
-
                   document.write("");
-
-
               return;
           }
       }
