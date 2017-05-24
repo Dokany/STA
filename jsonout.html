@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <textarea id="test"></textarea>
+
+    <script>
+        // Generate JSON from a javascript object
+        function jsonFromObj(obj) {
+            return JSON.stringify(obj, "", 2);
+        }
+
+        var textFile;
+
+        // Create link and "press it", to download a file.
+        function downloadFile(name, str) {
+            var data = new Blob([str], {
+                type: 'application/json'
+            });
+
+            // If we are replacing a previously generated file we need to
+            // manually revoke the object URL to avoid memory leaks.
+            if (textFile !== null) {
+                window.URL.revokeObjectURL(textFile);
+            }
+
+            // Create file and put link in textFile.
+            textFile = window.URL.createObjectURL(data);
+
+            var link = document.createElement('a');
+
+            // Link to our created file
+            link.href = textFile;
+
+            // Set the name of the file
+            link.setAttribute('download', name);
+
+            // Create a temporary node and click it.
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+        }
+
+        // Create Object
+        var obj = {
+            "Test": 1.0,
+            "Wow": "Yasmin"
+        };
+
+        // Modify Object
+        obj["Shahd"] = "Awesome";
+
+        // Get the JSON
+        var str = jsonFromObj(obj)
+
+        // Put it in an element with id test
+        document.getElementById("test").value = str;
+
+        // Download the file
+        downloadFile('info.json', str);
+    </script>
+</body>
+
+</html>
