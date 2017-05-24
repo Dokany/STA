@@ -2,6 +2,7 @@
   var Graph = new graphlib.Digraph();
   var count = 1;
 
+  // Function that parses the JSON Std Cell Libery File and returns dictionary of the format {"cell_name": atrributes}
   function parse_lib() {
       var lib = document.getElementById("lib_file");
       var reader = new FileReader();
@@ -20,6 +21,60 @@
       }
   }
 
+  // Function that parses the JSON net capacitances file and return cell_cap
+  function parse_cap() {
+      var cap = document.getElementById("net_capacitance");
+      var reader = new FileReader();
+      reader.readAsText(cap.files[0]);
+      reader.onload = function() {
+          var text = reader.result;
+          var json = JSON.parse(text);
+
+          var cell_cap = [];
+
+          for (cell in json.cells) {
+              cell_cap.push({
+
+              });
+          }
+      }
+  }
+
+  // Function that returns the capacitance of a given cell name
+  function get_capacitance(name) {
+      return cap;
+  }
+
+  // Function that computes the closest value in an array to given value
+  function closest_val(val, array) {
+      return closest;
+  }
+
+  // Function that returns the cell delay using the worst delay from the cell rise and fall values
+  function delay_lut(name, input_trans, net_cap) {
+      return delay;
+  }
+
+  // Function that returns the cell's output transition using the worst delay from the transition rise and fall
+  function output_trans(name, input_trans, net_cap) {
+      // cell-rise and cell-fall
+      return trans;
+  }
+
+  // Function that returns the cell's output transition using the worst delay from the transition rise and fall
+  function setup_table(name, input_trans, clk) {
+      // rise-transition and fall-transition
+      return setup;
+  }
+
+
+  // Function that returns the cell's output transition using the worst delay from the transition rise and fall
+  function hold_table(name, input_trans, clk) {
+      return hold;
+  }
+
+
+  // Function that traverses DAG and computes the delays across the cells
   function dfs(node, delay) {
       var arrow = "<b style=\"color: yellow;\"> → </b>";
 
@@ -38,10 +93,9 @@
       }
   }
 
+  function print_cpm() {
 
-  //   function cpm() {
-
-  //   }
+  }
 
   function eliminate_reps(Cellyy, Celliezz, cellyindex) {
       // document.write("hi!");//, Celliezz[cellyindex].name);
