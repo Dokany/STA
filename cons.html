@@ -51,28 +51,28 @@
     </header>
 
     <body>
+                <label><p>Upload Circuit Synthesis File</p></label>
+        <input class="file" type="file" accept=".json" id="synth_file" />
         <form>
             <label for="clock"><p>Clock Frequency</p></label>
-            <input type="text" id="clock" name="clock" placeholder="1000 Hz">
+            <input type="text" id="clock" name="clock" placeholder="Enter frequency in Hertz...">
         </form>
         
                 <form>
             <label for="clock_skew"><p>Clock Skew</p></label>
-            <input type="text" id="clock_skew" name="clock_skew" placeholder="100 ps">
+            <input type="text" id="clock_skew" name="clock_skew" placeholder="Enter clock skew in seconds...">
         </form>
         
                 <form>
             <label for="setup"><p>Setup Time</p></label>
-            <input type="text" id="setup" name="setup" placeholder="1.0 ps">
+            <input type="text" id="setup" name="setup" placeholder="Enter setup time in seconds...">
         </form>
         
                 <form>
             <label for="hold"><p>Hold Time</p></label>
-            <input type="text" id="hold" name="hold" placeholder="1.0 ps">
+            <input type="text" id="hold" name="hold" placeholder="Enter hold time in seconds...">
         </form>
 
-        <label><p>Upload Circuit Synthesis File</p></label>
-        <input class="file" type="file" accept=".json" id="synth_file" />
         <input class="btn" type="button" value="Check Constraints" onclick="main_func()" />
 
         <script src="Resources/js/sta_4.js"></script>
