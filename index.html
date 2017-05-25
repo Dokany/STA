@@ -21,16 +21,13 @@
 
 <div class="menu">
     <ul>
-        <a href="#">
-            <li>File Formats</li>
-        </a>
         <a href="dag.html">
             <li>DAG Generator</li>
         </a>
         <a href="cpm.html">
             <li>Critical Path Finder</li>
         </a>
-        <a href="#">
+        <a href="cons.html">
             <li>Timing Constraints</li>
         </a>
         <a href="about.html">
@@ -44,6 +41,12 @@
     </header>
 
     <body>
+        <p>
+            This is a static timing analysis tool that gets the Verilog gate level net list of a digital circuit, the library of the cells used in the circuit, the net capacitances file, the clocks skew file and timing constraints (the clock period, input delays
+            and output delays). The tool checks all the timing paths and reports the violating timing paths, if any.
+        </p>
+
+        <button><a class = "btn" href="STA_report.pdf" download="proposed_file_name">Download Report</a></button>
 
         <script src="Resources/js/hamburger_menu.js"></script>
     </body>

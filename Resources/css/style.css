@@ -79,12 +79,24 @@
             height: 250px;
         }
         
+        input[type=text] {
+            width: 25%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        
+        input[type=text]:focus {
+            background-color: lightblue;
+        }
+        
         .bw {
             background-image: url("../Images/background_bw.jpg");
         }
         
         .btn {
             font-size: 1em;
+            color: #000000;
             cursor: pointer;
         }
         

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Static Timing Analyzer</title>
+    <link id="css_home" rel="stylesheet" href="Resources/css/style.css" />
+    <meta charset="utf-8" />
+
+    <!-- for FF, Chrome, Opera -->
+    <link rel="icon" type="image/png" href="Resources/Images/icon.png" sizes="32x32">
+
+    <!-- for IE -->
+    <link rel="icon" type="image/x-icon" href="Resources/Images/icon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="Resources/Images/icon.ico" />
+
+    <script src="Resources/Vendors/graphlib.js"></script>
+    <script src="Resources/Vendors/d3.v4.min.js"></script>
+    <script src="Resources/Vendors/graphlib.min.js"></script>
+    <!--script src="https://d3js.org/d3-collection.v3.min.js"></script-->
+    <!--Broken Link-->
+    <script src="Resources/Vendors/d3-dispatch.v1.min.js"></script>
+    <script src="Resources/Vendors/d3-quadtree.v1.min.js"></script>
+    <script src="Resources/Vendors/d3-timer.v1.min.js"></script>
+    <script src="Resources/Vendors/d3-force.v1.min.js"></script>
+    <script src="Resources/Vendors/d3.v3.min.js"></script>
+    <script src="Resources/Vendors/jquery-3.2.1.min.js"></script>
+
+</head>
+
+<button class="hamburger">&#9776;</button>
+<button class="cross">&#735;</button>
+
+<div class="menu">
+    <ul>
+        <a href="dag.html">
+            <li>DAG Generator</li>
+        </a>
+        <a href="cpm.html">
+            <li>Critical Path Finder</li>
+        </a>
+        <a href="cons.html">
+            <li class="here">Timing Constraints</li>
+        </a>
+    </ul>
+</div>
+<div class="page">
+    <header>
+        <a href="index.html"><label><center><b><h1>Static Timing Analyzer</h1></b></center></label><br/></a>
+        <label><center><b><h2>Static Timing Analysis | Timing Constraints</h2></b></center></label><br/>
+    </header>
+
+    <body>
+        <label><p>Upload Standard Cell Library Liberty File</p></label>
+        <input class="file" type="file" accept=".json" id="lib_file" />
+        <input class="btn" type="button" value="Upload" />
+        <!--onclick="parse_lib()" />-->
+
+        <form>
+            <label for="clock"><p>Clock Frequency</p></label>
+            <input type="text" id="clock" name="clock" placeholder="1000 Hz">
+        </form>
+        
+                <form>
+            <label for="clock_skew"><p>Clock Skew</p></label>
+            <input type="text" id="clock_skew" name="clock_skew" placeholder="100 ps">
+        </form>
+        
+                <form>
+            <label for="setup"><p>Setup Time</p></label>
+            <input type="text" id="setup" name="setup" placeholder="1.0 ps">
+        </form>
+        
+                <form>
+            <label for="hold"><p>Hold Time</p></label>
+            <input type="text" id="hold" name="hold" placeholder="1.0 ps">
+        </form>
+
+        <label><p>Upload Circuit Synthesis File</p></label>
+        <input class="file" type="file" accept=".json" id="synth_file" />
+        <input class="btn" type="button" value="Check Constraints" onclick="main_func()" />
+
+        <script src="Resources/js/sta_4.js"></script>
+        <script src="Resources/js/hamburger_menu.js"></script>
+    </body>
+
+    <footer>
+        <small><center>&copy Copyright 2017, <a href="group10.html">Group 10</a></center></small>
+    </footer>
+</div>
+
+</html>

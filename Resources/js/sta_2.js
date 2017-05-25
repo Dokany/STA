@@ -85,7 +85,7 @@
 
       reader.readAsText(bytes.files[0]);
       reader.onload = function() {
-          document.write("<title>DAG Generator</title><body style=\"background:#ebf0fa; color:#000000;\"><button onclick=\"printr()\" style=\"float: right;\">Print Report</button><script>function printr() { window.print(); }</script>");
+          document.write("<!DOCTYPE html><head><title>DAG Generator</title></head><body style=\"background:#ebf0fa; color:#000000;\"><button onclick=\"printr()\" style=\"float: right;\">Print Report</button><script>function printr() { window.print(); }</script>");
 
           var text = reader.result; //the letters of the file are in this variable
           var json = JSON.parse(text); //here we have the json objects we just need to index them correctly

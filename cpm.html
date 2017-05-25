@@ -33,20 +33,14 @@
 
 <div class="menu">
     <ul>
-        <a href="#">
-            <li>File Formats</li>
-        </a>
         <a href="dag.html">
             <li>DAG Generator</li>
         </a>
         <a href="cpm.html">
             <li class="here">Critical Path Finder</li>
         </a>
-        <a href="#">
+        <a href="cons.html">
             <li>Timing Constraints</li>
-        </a>
-        <a href="about.html">
-            <li>About Project</li>
         </a>
     </ul>
 </div>
@@ -66,6 +60,11 @@
         <input class="file" type="file" accept=".json" id="net_capacitance" />
         <input class="btn" type="button" value="Upload" />
         <!--onclick="parse_cap()" />-->
+
+        <form>
+            <label for="wire_cap"><p>Fixed Wire Capacitance</p></label>
+            <input type="text" id="wire_cap" name="wire_cap" placeholder="1.0">
+        </form>
 
         <label><p>Upload Circuit Synthesis File</p></label>
         <input class="file" type="file" accept=".json" id="synth_file" />
