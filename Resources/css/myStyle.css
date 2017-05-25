@@ -1,0 +1,21 @@
+   
+path {
+    fill: none;
+    stroke: green;
+    stroke-width: 1.5px;
+}
+.node text {
+    pointer-events: none;
+    font: 10px sans-serif;
+
+}
+.node text.shadow {
+    stroke: #fff;
+    stroke-width: 3px;
+    stroke-opacity: .8;
+}
+.node circle {
+    stroke: #333;
+    stroke-width: 1.5px;
+    fill: #ccc;
+}
